@@ -1,9 +1,11 @@
 Common Lisp Package Manager
 ===
 
+![Common Lisp Package Manager](https://raw.githubusercontent.com/1ambda/clpm/master/images/screenshot1.png)
+
 ### Install
 
-**clpm** requires **sbcl**, **quicklisp** You have to install them to use clpm
+`clpm` requires **sbcl**, **quicklisp**. You have to install them before using `clpm`
 
 ```
 $ sudo npm install -g clpm
