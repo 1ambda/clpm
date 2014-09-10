@@ -1,6 +1,6 @@
 {
   "name": "clpm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Common Lisp Package Manager",
   "author": "1ambda <1amb4a@gmail.com>",
   "main": "index.js",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/1ambda/clpm",
   "dependencies": {
+    "colors": "^0.6.2",
     "commander": "^2.3.0"
   },
   "devDependencies": {

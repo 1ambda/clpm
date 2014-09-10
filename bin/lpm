@@ -1,10 +1,16 @@
 #!/usr/bin/env node
 
+/*
+ * require modules
+ */
 var cmd = require('commander');
-var options = require('../lib');
-var search = options.search;
+var lib = require('../lib');
+var package = require('../package.json');
 
-cmd.version('0.1.0')
+var search = lib.search;
+var log = lib.log;
+
+cmd.version(package.version)
   .option('-s, --search <system>', 'search systems', search)
   .parse(process.argv);
 
@@ -13,7 +19,8 @@ if (cmd.args.length >= 1) {
   cmd.args.forEach(search);
 }
 
+// handle exceptions
 process.on('uncaughtException', function(err) {
-  console.log("uncaughtException" + err);
+  log.error("uncaughtException", err);
 });
 
