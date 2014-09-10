@@ -5,7 +5,7 @@ Common Lisp Package Manager
 
 **clpm** requires **sbcl**, **quicklisp** You have to install them to use clpm
 
-``
+```
 $ sudo npm install -g clpm
 ```
 
@@ -34,5 +34,3 @@ Just make a pull request. I'll accept without questions. Anyone do better than m
 **0.6.0** : removing systeems using qlot
 
 being indenpendent from quicklisp and qlot.
-
-
