@@ -11,14 +11,14 @@ function search(package) {
     exec(command, function(err, stdin) {
       if (err) throw new Error(err);
       if (stdin) console.log("stdin" + stdin);
-      if (stdin === "") console.log('no packages like: ' + package);
+      if (stdin === "") console.log('no system like: ' + package);
     });
     
     return module;
 }
 
 cmd.version('0.1.0')
-  .option('-s, --search <package>', 'search packages', search)
+  .option('-s, --search <system>', 'search systems', search)
   .parse(process.argv);
 
 if (cmd.args.length >= 1) {
