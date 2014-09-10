@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+var request = require('request');
+var cmd = require('commander');
+var exec = require('child_process').exec;
+var util = require('util');
+
+function search(package) {
+    var command = util.format('sbcl --noinform --quit --eval \'(ql:system-apropos \"%s\")\'', package);
+
+    exec(command, function(err, stdin) {
+      if (err) throw new Error(err);
+      if (stdin) console.log("stdin" + stdin);
+      if (stdin === "") console.log('no packages like: ' + package);
+    });
+    
+    return module;
+}
+
+cmd.version('0.1.0')
+  .option('-s, --search <package>', 'search packages', search)
+  .parse(process.argv);
+
+if (cmd.args.length >= 1) {
+  // case: no option specified. search all packages in args
+  cmd.args.forEach(search);
+}
+
+process.on('uncaughtException', function(err) {
+  console.log("uncaughtException" + err);
+});
+

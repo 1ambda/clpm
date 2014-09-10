@@ -2,19 +2,35 @@
   "name": "clpm",
   "version": "0.1.0",
   "description": "Common Lisp Package Manager",
+  "author": "1ambda <1amb4a@gmail.com>",
+
   "main": "index.js",
-  "engines" ">0.10",
+  "engines": ">=0.10.0",
+  "bin": {
+    "lpm": "bin/lpm"
+  }, 
+  "preferGlobal": "true",
+
   "scripts": {
+    "start": "node ./bin/lpm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "repository": {
     "type": "git",
     "url": "git@github.com:1ambda/clpm.git"
   },
-  "author": "1ambda (1amb4a@gmail.com)",
+
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/1ambda/clpm/issues"
   },
-  "homepage": "https://github.com/1ambda/clpm"
+  "homepage": "https://github.com/1ambda/clpm",
+  "dependencies": {
+    "commander": "^2.3.0",
+    "request": "^2.42.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }

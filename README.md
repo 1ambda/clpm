@@ -1,7 +1,16 @@
 clpm
 ===
 
-npm install clpm
+### Install
+`sudo npm install clpm`
 
-lpm restas
+### Usage
 
+#### Search
+
+default options is `-s` search
+
+```
+$ lpm restas mysql mongodb
+$ lpm -s xml json
+```
