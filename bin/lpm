@@ -1,21 +1,8 @@
 #!/usr/bin/env node
 
-var request = require('request');
 var cmd = require('commander');
-var exec = require('child_process').exec;
-var util = require('util');
-
-function search(package) {
-    var command = util.format('sbcl --noinform --quit --eval \'(ql:system-apropos \"%s\")\'', package);
-
-    exec(command, function(err, stdin) {
-      if (err) throw new Error(err);
-      if (stdin) console.log("stdin" + stdin);
-      if (stdin === "") console.log('no system like: ' + package);
-    });
-    
-    return module;
-}
+var options = require('../lib');
+var search = options.search;
 
 cmd.version('0.1.0')
   .option('-s, --search <system>', 'search systems', search)
