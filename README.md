@@ -26,7 +26,7 @@ $ lpm -s xml json
 
 Just make a pull request. I'll accept without questions. Anyone do better than me. 
 
-### Minestone
+### Milestone
 
 **0.1.x** : system searching, pretty print  
 **0.2.0** : provide quicklisp client info option  
