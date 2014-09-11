@@ -1,7 +1,7 @@
 var should = require('should');
-var parseSystem = require('../lib/search').parseSystem;
-var QlSystemDescription = require('../lib/QlSystemDescription');
-var log = require('../lib/log');
+var parseSystem = require('../lib/commands/search').parseSystem;
+var QlSystemDescription = require('../lib/models/QlSystemDescription');
+var log = require('../lib/utils/log');
 
 describe('file: search.js', function() {
   describe('#parseSystem', function() {
