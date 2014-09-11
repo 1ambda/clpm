@@ -7,17 +7,34 @@ var cmd = require('commander');
 var lib = require('../lib');
 var package = require('../package.json');
 
-var search = lib.search;
 var log = lib.log;
-
+var search = lib.search;
+var prepare = lib.prepare;
+var doctor = lib.doctor;
+  
 cmd.version(package.version)
-  .option('-s, --search <system>', 'search systems', search)
+  .option('-s, search <system>',
+	  'search systems',
+	  search)
+  .option('-p, prepare <program>',
+	  'install \'sbcl\', \'quicklisp\' or \'qlot\'',
+	  prepare)
+  .option('-d, doctor',
+	  '',
+	  doctor)
   .parse(process.argv);
+
+if (process.argv.length === 2) {
+  // case: no arguments. print help and exit
+  cmd.help();
+}
+
 
 if (cmd.args.length >= 1) {
   // case: no option specified. search all packages in args
   cmd.args.forEach(search);
 }
+
 
 // handle exceptions
 process.on('uncaughtException', function(err) {
