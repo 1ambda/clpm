@@ -1,6 +1,6 @@
 # Common Lisp Package Manager
 
-[![Build Statue](https://travis-ci.org/1ambda/clpm)](https://travis-ci.org/1ambda/clpm.svg?branch=master)
+[![Build Statue](https://travis-ci.org/1ambda/clpm.svg?branch=master)](https://travis-ci.org/1ambda/clpm)
 
 > current version is 0.1.x
 
