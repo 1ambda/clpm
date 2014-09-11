@@ -20,9 +20,9 @@ describe('file: parseQuicklisp.js', function() {
 	    '#<xmls-tools / xmls-tools-20110320-http / quicklisp / 2014-08-26>';
       
       (parseSystem.bind(null, ''))
-        .should.throw('quicklisp system description changed');
+        .should.throw();
       (parseSystem.bind(null, invalidStr))
-        .should.throw('quicklisp system description changed');
+        .should.throw();
     });
   });
 });

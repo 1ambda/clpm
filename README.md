@@ -33,7 +33,7 @@ $ lpm -s xml json
 **0.3.0** : parsing protocol  
 **0.4.0** : install quicklisp, qlot using lpm  
 **0.5.0** : installing systems using qlot  
-**0.6.0** : removing systeems using qlot  
+**0.6.0** : removing systems using qlot  
 
 being indenpendent from quicklisp and qlot.  
 
