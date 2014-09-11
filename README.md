@@ -1,6 +1,10 @@
-Common Lisp Package Manager 0.1.2
-===
+# Common Lisp Package Manager
 
+[![Build Statue](https://travis-ci.org/1ambda/clpm.svg?branch=master)](https://travis-ci.org/1ambda/clpm.svg?branch=master)
+
+> current version is 0.1.x
+
+<br/>
 ![Common Lisp Package Manager](https://raw.githubusercontent.com/1ambda/clpm/master/images/screenshot1.png)
 
 ### Install
