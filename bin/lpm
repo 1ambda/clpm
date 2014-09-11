@@ -21,6 +21,6 @@ if (cmd.args.length >= 1) {
 
 // handle exceptions
 process.on('uncaughtException', function(err) {
-  log.error("uncaughtException", err);
+  log.error("uncaughtException ", err);
 });
 
