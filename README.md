@@ -1,4 +1,4 @@
-Common Lisp Package Manager
+Common Lisp Package Manager 0.1.2
 ===
 
 ![Common Lisp Package Manager](https://raw.githubusercontent.com/1ambda/clpm/master/images/screenshot1.png)
@@ -22,10 +22,6 @@ $ lpm restas mysql mongodb
 $ lpm -s xml json
 ```
 
-### Contribute
-
-Just make a pull request. I'll accept without questions. Anyone do better than me. 
-
 ### Milestone
 
 **0.1.x** : system searching, pretty print  
@@ -36,3 +32,11 @@ Just make a pull request. I'll accept without questions. Anyone do better than m
 **0.6.0** : removing systeems using qlot  
 
 being indenpendent from quicklisp and qlot.  
+
+### Contribute
+
+Just make a pull request. I'll accept without questions. Anyone does better than me.
+
+### License
+
+MIT
