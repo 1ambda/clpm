@@ -43,14 +43,14 @@ $ lpm --update client
 ### Milestone
 
 **0.1.x** : system searching, pretty print  
-**0.2.0** : provide quicklisp client infomation__
-**0.3.0** : multi platform support__
-**0.4.0** : installing sbcl, quicklisp, qlot__
+**0.2.0** : provide quicklisp client infomation  
+**0.3.0** : multi platform support  
+**0.4.0** : installing sbcl, quicklisp, qlot  
 **0.5.0** : parsing protocol  
 **0.6.0** : installing systems using qlot  
 **0.7.0** : removing systems using qlot  
-**0.7.0** : caching__
-**0.8.0** : start command, build command__
+**0.8.0** : caching  
+**0.9.0** : start command, build command  
 
 being indenpendent from quicklisp and qlot.
 
