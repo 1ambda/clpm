@@ -11,17 +11,21 @@ var log = lib.log;
 var search = lib.search;
 var prepare = lib.prepare;
 var doctor = lib.doctor;
+var update = lib.update;
   
 cmd.version(package.version)
-  .option('-s, search <system>',
+  .option('-s, --search <system>',
 	  'search systems',
 	  search)
-  .option('-p, prepare <program>',
-	  'install \'sbcl\', \'quicklisp\' or \'qlot\'',
+  .option('-p, --prepare <program>',
+	  "install 'sbcl', 'quicklisp' or 'qlot'",
 	  prepare)
-  .option('-d, doctor',
+  .option('-d, --doctor',
 	  '',
 	  doctor)
+  .option('-u, --update <command>',
+	  "update 'client' or 'dist'",
+	  update)
   .parse(process.argv);
 
 if (process.argv.length === 2) {

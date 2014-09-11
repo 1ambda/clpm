@@ -1,9 +1,9 @@
 var should = require('should');
-var parseSystem = require('../lib/parseQuicklisp').parseSystem;
+var parseSystem = require('../lib/search').parseSystem;
 var QlSystemDescription = require('../lib/QlSystemDescription');
 var log = require('../lib/log');
 
-describe('file: parseQuicklisp.js', function() {
+describe('file: search.js', function() {
   describe('#parseSystem', function() {
     it('should parse string and return QlSystemDescription object', function() {
       

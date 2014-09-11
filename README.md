@@ -7,7 +7,7 @@
 <br/>
 ![Common Lisp Package Manager](https://raw.githubusercontent.com/1ambda/clpm/master/images/screenshot1.png)
 
-### Install
+### Installation
 
 `clpm` requires **sbcl**, **quicklisp**. You have to install them before using `clpm`
 
@@ -17,7 +17,7 @@ $ sudo npm install -g clpm
 
 ### Usage
 
-##### Search
+#### Search
 
 default options is `-s` search
 
@@ -26,18 +26,35 @@ $ lpm restas mysql mongodb
 $ lpm -s xml json
 ```
 
+#### Update Distribution
+
+```
+$ lpm -u dist
+$ lpm --update dist
+```
+
+#### Update Quicklisp Client
+
+```
+$ lpm -u client
+$ lpm --update client
+```
+
 ### Milestone
 
 **0.1.x** : system searching, pretty print  
-**0.2.0** : provide quicklisp client info option  
-**0.3.0** : parsing protocol  
-**0.4.0** : install quicklisp, qlot using lpm  
-**0.5.0** : installing systems using qlot  
-**0.6.0** : removing systems using qlot  
+**0.2.0** : provide quicklisp client infomation__
+**0.3.0** : multi platform support__
+**0.4.0** : installing sbcl, quicklisp, qlot__
+**0.5.0** : parsing protocol  
+**0.6.0** : installing systems using qlot  
+**0.7.0** : removing systems using qlot  
+**0.7.0** : caching__
+**0.8.0** : start command, build command__
 
-being indenpendent from quicklisp and qlot.  
+being indenpendent from quicklisp and qlot.
 
-### Contribute
+### Contributtion
 
 Just make a pull request. I'll accept without questions. Anyone does better than me.
 
