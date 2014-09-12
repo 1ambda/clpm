@@ -2,6 +2,11 @@
 
 module.exports = function(grunt) {
   grunt.initConfig({
+    env: {
+      test: {
+	NODE_ENV: 'test'
+      }
+    },
     mochaTest: {
       test: {
 	options: {
@@ -16,5 +21,5 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // custom tasks
-  grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('test', ['env:test', 'mochaTest']);
 };

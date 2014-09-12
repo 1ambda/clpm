@@ -14,34 +14,32 @@ var doctor = lib.doctor;
 var update = lib.update;
   
 cmd.version(package.version)
-  .option('-s, --search <system>',
-	  'search systems',
-	  search)
-  .option('-p, --prepare <program>',
-	  "install 'sbcl', 'quicklisp' or 'qlot'",
-	  prepare)
-  .option('-d, --doctor',
-	  '',
-	  doctor)
-  .option('-u, --update <command>',
-	  "update 'client' or 'dist'",
-	  update)
+  .option('-s, search, --search <system>',
+	  'search systems')
+  .option('-p, prepare, --prepare <program>',
+	  "install 'sbcl', 'quicklisp' or 'qlot'")
+  .option('-d, doctor --doctor',
+	  'dignose whether prepared well or not')
+  .option('-u, update, --update <command>',
+	  "update 'client' or 'dist'")
   .parse(process.argv);
+
+if (cmd.search) search(cmd.search);
+else if (cmd.update) update(cmd.update);
+else if (cmd.prepare) prepare(cmd.prepare);
+else if (cmd.doctor) doctor();
+else {
+  log.lpm('Unknown option: ', cmd.args[0]);
+  cmd.help(); 
+}
 
 if (process.argv.length === 2) {
   // case: no arguments. print help and exit
   cmd.help();
 }
 
-
-if (cmd.args.length >= 1) {
-  // case: no option specified. search all packages in args
-  cmd.args.forEach(search);
-}
-
-
 // handle exceptions
 process.on('uncaughtException', function(err) {
-  log.error("uncaughtException ", err);
+  log.error(err.message, err.stack);
 });
 

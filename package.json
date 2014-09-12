@@ -1,6 +1,6 @@
 {
   "name": "clpm",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Common Lisp Package Manager",
   "author": "1ambda <1amb4a@gmail.com>",
   "main": "index.js",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-env": "^0.4.1",
     "grunt-mocha-test": "^0.11.0",
     "matchdep": "^0.3.0",
     "should": "^4.0.4"

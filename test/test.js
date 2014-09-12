@@ -15,14 +15,12 @@ describe('file: search.js', function() {
 
     });
 
-    it('should throw an error when given string is invalid format', function() {
+    it('should return null when given string is invalid format', function() {
       var invalidStr =
 	    '#<xmls-tools / xmls-tools-20110320-http / quicklisp / 2014-08-26>';
-      
-      (parseSystem.bind(null, ''))
-        .should.throw();
-      (parseSystem.bind(null, invalidStr))
-        .should.throw();
+
+      (parseSystem('') === null).should.be.true;
+      (parseSystem(invalidStr) === null).should.be.true;
     });
   });
 });

@@ -19,8 +19,6 @@ $ sudo npm install -g clpm
 
 #### Search
 
-default options is `-s` search
-
 ```
 $ lpm restas mysql mongodb
 $ lpm -s xml json
