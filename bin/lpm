@@ -29,7 +29,11 @@ else if (cmd.update) update(cmd.update);
 else if (cmd.prepare) prepare(cmd.prepare);
 else if (cmd.doctor) doctor();
 else {
-  log.lpm('Unknown option: ', cmd.args[0]);
+
+  switch(cmd.args.length) {
+    case 0: log.lpm('No option specified. Read help.'); break;
+    default: log.lpm('Unknown option: ', cmd.args[0]); 
+  }
   cmd.help(); 
 }
 
