@@ -18,7 +18,7 @@ $ sudo npm install -g clpm
 
 ### Usage
 
-**lpm** supports 3 formats of option. for example,
+**lpm** supports 3 format of options. for example,
 
 - `-s`
 - `search`
