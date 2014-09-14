@@ -1,7 +1,11 @@
+// require modules
 var should = require('should');
+
+// custom modules
 var parseSystem = require('../lib/commands/search').parseSystem;
 var QlSystemDescription = require('../lib/models/QlSystemDescription');
 var log = require('../lib/utils/log');
+var preBrowse= require('../lib/commands/browse').preBrowse;
 
 describe('file: search.js', function() {
   describe('#parseSystem', function() {
@@ -27,10 +31,22 @@ describe('file: search.js', function() {
 
 describe('file: log.js', function() {
   describe('#log.system', function() {
-    
     it('should throw an error when given object isn\'t inst of QlSystemDescription ', function() {
       (log.system.bind(null, {taaype: 'System', sysName: 'xml-1.5', sysVer: '20131110'}))
         .should.throw('expected QlSystemDescription Object');
+    });
+  });
+});
+
+// this test should be run under networking enable environment
+describe('file: browse.js', function() {
+  describe('#preBrowse', function() {
+    it("should never call the callback when statusCode != 200", function(done) {
+      preBrowse('NonExistsSystem#', function(err) {
+	should.exist(err);
+	err.message.should.equal('Page not found');
+	done();
+      });
     });
   });
 });

@@ -5,9 +5,6 @@
 > current version is 0.1.9. Support Ubuntu, SBCL only
 > But We have plan to support other OS and other lisp impl such as Clisp  
 
-<br/>
-![Common Lisp Package Manager](https://raw.githubusercontent.com/1ambda/clpm/master/images/screenshot1.png)
-
 ### Installation
 
 `clpm` requires **sbcl**, **quicklisp**. You have to install them before using `clpm`
