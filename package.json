@@ -1,6 +1,6 @@
 {
   "name": "clpm",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Common Lisp Package Manager",
   "author": "1ambda <1amb4a@gmail.com>",
   "main": "index.js",
