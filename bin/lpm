@@ -12,6 +12,7 @@ var search = lib.search;
 var prepare = lib.prepare;
 var doctor = lib.doctor;
 var update = lib.update;
+var browse = lib.browse;
   
 cmd.version(package.version)
   .option('-s, search, --search <system>',
@@ -22,17 +23,21 @@ cmd.version(package.version)
 	  'dignose whether prepared well or not')
   .option('-u, update, --update <command>',
 	  "update 'client' or 'dist'")
+  .option('-b, browse, --browse <system>',
+	  "browse system in quickdocs.org")
   .parse(process.argv);
 
 if (cmd.search) search(cmd.search);
 else if (cmd.update) update(cmd.update);
 else if (cmd.prepare) prepare(cmd.prepare);
+else if (cmd.browse) browse(cmd.browse);
 else if (cmd.doctor) doctor();
 else {
-
+  // case: 'lpm' or 'lpm unknownOption'
+  // print help and exit
   switch(cmd.args.length) {
-    case 0: log.lpm('No option specified. Read help.'); break;
-    default: log.lpm('Unknown option: ', cmd.args[0]); 
+  case 0: log.lpm('No option specified. Read help.'); break;
+  default: log.lpm('Unknown option: ', cmd.args[0]); 
   }
   cmd.help(); 
 }

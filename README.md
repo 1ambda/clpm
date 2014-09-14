@@ -2,7 +2,8 @@
 
 [![Build Statue](https://travis-ci.org/1ambda/clpm.svg?branch=master)](https://travis-ci.org/1ambda/clpm)
 
-> current version is 0.1.x
+> current version is 0.1.9. Support Ubuntu, SBCL only
+> But We have plan to support other OS and other lisp impl such as Clisp  
 
 <br/>
 ![Common Lisp Package Manager](https://raw.githubusercontent.com/1ambda/clpm/master/images/screenshot1.png)
@@ -17,25 +18,31 @@ $ sudo npm install -g clpm
 
 ### Usage
 
+**lpm** supports 3 formats of option. for example,
+
+- `-s`
+- `search`
+- `--search`
+
+See help.
+
 #### Search
 
 ```
-$ lpm restas mysql mongodb
-$ lpm -s xml json
+$ lpm -s xml
 ```
 
-#### Update Distribution
+#### Update 
 
 ```
-$ lpm -u dist
-$ lpm --update dist
+$ lpm -u dist ;; update system distribuion
+$ lpm -u client ;; update quicklisp client
 ```
 
-#### Update Quicklisp Client
+#### Browse
 
 ```
-$ lpm -u client
-$ lpm --update client
+$ lpm -b cl-json ;; browse the cl-json docs page
 ```
 
 ### Milestone
@@ -49,8 +56,6 @@ $ lpm --update client
 **0.7.0** : removing systems using qlot  
 **0.8.0** : caching  
 **0.9.0** : start command, build command  
-
-being indenpendent from quicklisp and qlot.
 
 ### Contributtion
 
